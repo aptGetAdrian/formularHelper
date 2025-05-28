@@ -21,6 +21,23 @@ document.addEventListener("selectionchange", () => {
                 selectedText: selectedText
             }
 
+            // const xhr = new XMLHttpRequest();
+// 
+            // xhr.open("POST", "http://127.0.0.1:8000/selected");
+            // xhr.setRequestHeader("Content-Type", "application/json");
+            // const body = JSON.stringify({
+            //     selectedText: selectedText,
+            // });
+// 
+            // xhr.onload = () => {
+            // if (xhr.readyState == 4 && xhr.status == 201) {
+            //     console.log(JSON.parse(xhr.responseText));
+            // } else {
+            //     console.log(`Error: ${xhr.status}`);
+            // }
+            // };
+            // xhr.send(body);
+
             fetch('http://127.0.0.1:8000/selected', {
                 method: 'POST', 
                 headers: {

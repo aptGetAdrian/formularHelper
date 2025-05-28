@@ -13,8 +13,7 @@ def selected():
     if request.is_json:
         data = request.json 
         received_text = data.get('selectedText', 'No selectedText key found')
-        print(f"Received JSON data: {data}") 
-        print(f"Extracted selectedText: {received_text}") 
+        print(f"Extracted selectedText:\n{received_text}") 
 
         return jsonify({'message': f'Successfully received: {received_text}'})
     else:
